@@ -1,0 +1,57 @@
+import java.util.Scanner;
+class rect{
+    int width,length;
+    String color;
+
+    void setLength(int a) {
+        length=a;
+    }
+    void setWidth(int a) {
+        width=a;
+    }
+    void setColor(String a) {
+        color =a;
+    }
+    int area(){
+        return(length*width);
+    }
+    String getColor(){
+        return (color);
+    }
+}
+public class rectangle {
+    public static void main(String[] args) {
+        int l,w;
+        String color;
+        Scanner sc = new Scanner(System.in);
+
+        rect rect1 = new rect();
+        System.out.println("Enter the length:");
+        l=sc.nextInt();
+        rect1.setLength(l);
+        System.out.println("Enter the width:");
+        w=sc.nextInt();
+        rect1.setWidth(w);
+        System.out.println("Enter the color:");
+        color=sc.next();
+        rect1.setColor(color);
+
+        rect rect2 =new rect();
+        System.out.println("Enter the length:");
+        l=sc.nextInt();
+        rect2.setLength(l);
+        System.out.println("Enter the width:");
+        w=sc.nextInt();
+        rect2.setWidth(w);
+        System.out.println("Enter the color:");
+        color=sc.next();
+        rect2.setColor(color);
+
+        if(rect1.area()==rect2.area() && rect1.getColor().equals(rect2.getColor())){
+            System.out.println("Matching Reactangles");
+        }
+        else {
+            System.out.println("Non-Matching Rectangles");
+        }
+    }
+}
