@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class SumAndAvg {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        double no,sum =0, avg;
+        int n;
+
+        System.out.print("How many numbers you want to enter: ");
+        n = in.nextInt();
+        for(int i=0;i<n;++i)
+        {
+            System.out.print("Enter the "+(i+1)+" No: ");
+            no = in.nextDouble();
+            sum = sum+ no;
+        }
+        avg = sum/n;
+        System.out.println("Sum of "+ n+" numbers is "+sum);
+        System.out.println("Avg of " + n + " numbers is "+ avg);
+    }
+}
